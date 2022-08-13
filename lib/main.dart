@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop_app/welcome_screen.dart';
+import 'package:online_shop_app/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
         title: '',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+        
         ),
-        home: WelcomeScreen());
+        home: const HomePage());
   }
 }

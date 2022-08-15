@@ -9,12 +9,12 @@ class Categories extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          for (int i = 1; i < 9; i++)
+          for (int i = 1; i < 8; i++)
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: const Color(0xFE5E69E9),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
@@ -25,10 +25,10 @@ class Categories extends StatelessWidget {
                     width: 40,
                     height: 40,
                   ),
-                  Text(
-                    'All',
+                  const Text(
+                    'Alaments',
                     style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                  )
+                  ),
                 ],
               ),
             ),

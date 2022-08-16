@@ -6,15 +6,15 @@ class Items extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      childAspectRatio: 0.68, //  za povecavanje kontnjera u gridu
-      physics: NeverScrollableScrollPhysics(), // za scrolovanje
+      childAspectRatio: 0.55, //  za povecavanje kontnjera u gridu
+      physics: const NeverScrollableScrollPhysics(), // za scrolovanje
       crossAxisCount: 2,
       shrinkWrap: true,
       children: [
         for (int i = 1; i < 8; i++) // za dobijane kartica na displeju
           Container(
-            padding: EdgeInsets.only(left: 15, right: 15, top: 10),
-            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),

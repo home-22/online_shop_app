@@ -1,28 +1,28 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
-class AppsBar extends StatelessWidget {
-  const AppsBar({Key? key}) : super(key: key);
+class HomeAppBar extends StatelessWidget {
+  const HomeAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      padding: const EdgeInsets.all(20),
+      color: Colors.grey[100],
+      padding: const EdgeInsets.all(10),
       child: Row(
         children: [
           CircleAvatar(
-            backgroundColor: Colors.cyan[50],
-            child: const Icon(
+            backgroundColor: Colors.white,
+            child: Icon(
               Icons.segment_outlined,
               size: 30,
-              color: Colors.red,
+              color: Colors.redAccent[100],
             ),
           ),
           Padding(
-              padding: const EdgeInsets.only(left: 100),
+              padding: const EdgeInsets.only(left: 60),
               child: Column(
-                children: [
+                children: const [
                   Text(
                     'Helo Zoskia',
                     style: TextStyle(
@@ -41,12 +41,14 @@ class AppsBar extends StatelessWidget {
               )),
           const Spacer(),
           Badge(
-            badgeColor: Color(0xFE5E69E9),
+            badgeColor: Colors.redAccent,
             padding: const EdgeInsets.all(7),
             badgeContent: const Text('2'),
             child: InkWell(
-              onTap: () {},
-              child: CircleAvatar(
+              onTap: () {
+                Navigator.pushNamed(context, 'cardPage');
+              },
+              child: const CircleAvatar(
                 foregroundImage: AssetImage('images/user.png'),
               ),
             ),

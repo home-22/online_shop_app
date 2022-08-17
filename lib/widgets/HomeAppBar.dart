@@ -46,7 +46,7 @@ class HomeAppBar extends StatelessWidget {
             badgeContent: const Text('2'),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'cardPage');
+                Navigator.pushNamed(context, 'CartPage');
               },
               child: const CircleAvatar(
                 foregroundImage: AssetImage('images/user.png'),

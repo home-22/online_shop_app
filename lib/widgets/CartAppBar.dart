@@ -18,7 +18,7 @@ class CartAppBar extends StatelessWidget {
               color: Colors.redAccent[100],
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 40),
             child: Text(
               'Card',

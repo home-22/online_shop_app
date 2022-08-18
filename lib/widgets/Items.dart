@@ -25,10 +25,10 @@ class Items extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xFE5E69E9),
+                        color: const Color(0xFE5E69E9),
                       ),
                       child: const Text(
                         '-50%',
@@ -38,7 +38,7 @@ class Items extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.favorite_border,
                       color: Colors.red,
                     ),
@@ -47,7 +47,7 @@ class Items extends StatelessWidget {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     child: Image.asset(
                       'images/$i.jpg',
                       height: 100,
@@ -57,9 +57,9 @@ class Items extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.only(bottom: 10),
                   alignment: Alignment.centerLeft,
-                  child: Text(
+                  child: const Text(
                     'Product Title',
                     style: TextStyle(
                         fontSize: 18,
@@ -69,13 +69,13 @@ class Items extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  child: Text('Write description of products... '),
+                  child: const Text('Write description of products... '),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         '\$ 129.00',
                         style: TextStyle(

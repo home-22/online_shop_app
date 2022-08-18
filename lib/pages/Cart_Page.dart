@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/widgets/CartAppBar.dart';
+import 'package:online_shop_app/widgets/CartBottomNavBar.dart';
 import 'package:online_shop_app/widgets/Cart_Items.dart';
 
 class CartPage extends StatelessWidget {
@@ -10,23 +11,55 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          CartAppBar(),
+          const CartAppBar(),
           Container(
             height: 700,
-            padding: EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
               color: Colors.grey[350],
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
             ),
             child: Column(
-              children: [CartItems()],
+              children: [
+                const CartItems(),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[300],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'Add Coupon Code',
+                          style: TextStyle(
+                            color: Colors.red[300],
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
-          )
+          ),
         ],
       ),
+      bottomNavigationBar: const CartBottomNavBar(),
     );
   }
 }

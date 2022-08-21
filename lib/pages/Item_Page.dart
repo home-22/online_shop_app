@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:online_shop_app/widgets/CartAppBar.dart';
@@ -35,12 +36,13 @@ class ItemPage extends StatelessWidget {
               child: Row(
                 children: const [
                   Text(
-                      'Pink blazer with soft matrial.not hot comfortable\ncaying.available in various sizes.suitable for use at\nparties'),
+                      'Pink blazer with soft material.not hot comfortable\ncaying.available in various sizes.suitable for use at\nparties'),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 10, left: 20, top: 5),
+              padding: const EdgeInsets.only(
+                  bottom: 10, left: 20, right: 20, top: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -56,6 +58,54 @@ class ItemPage extends StatelessWidget {
                       color: Colors.red,
                     ),
                     onRatingUpdate: (index) {},
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 3,
+                                blurRadius: 10,
+                                offset: Offset(0, 3),
+                              ),
+                            ]),
+                        child: Icon(
+                          CupertinoIcons.plus,
+                          size: 18,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          '01',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 3,
+                                blurRadius: 10,
+                                offset: Offset(0, 3),
+                              ),
+                            ]),
+                        child: Icon(
+                          CupertinoIcons.minus,
+                          size: 18,
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),

@@ -7,15 +7,21 @@ class Categories extends StatefulWidget {
   State<Categories> createState() => _CategoriesState();
 }
 
+List<Text> Textt = [
+  const Text('All'),
+  const Text('Popular'),
+  const Text('Recent'),
+  const Text('Recomended'),
+];
+
 class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController _tabController = TabController(length: 4, vsync: this);
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          for (int i = 1; i < 5; i++)
+          for (int i = 0; i < 4; i++)
             Container(
               height: 40,
               margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -29,22 +35,9 @@ class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
                 children: [
                   Container(
                     height: 50,
-                    width: 50,
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: TabBar(
-                        controller: _tabController,
-                        labelColor: Colors.black,
-                        unselectedLabelColor: Colors.grey,
-                        isScrollable: true,
-                        indicatorSize: TabBarIndicatorSize.label,
-                        tabs: const [
-                          Tab(text: 'All'),
-                          Tab(text: 'Popular'),
-                          Tab(text: 'Recent'),
-                          Tab(text: 'Recomended')
-                        ],
-                      ),
+                      child: Textt[i],
                     ),
                   ),
                 ],

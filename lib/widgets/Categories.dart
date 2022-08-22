@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Categories extends StatefulWidget {
@@ -7,7 +9,7 @@ class Categories extends StatefulWidget {
   State<Categories> createState() => _CategoriesState();
 }
 
-List<Text> Textt = [
+List<Text> constText = [
   const Text('All'),
   const Text('Popular'),
   const Text('Recent'),
@@ -24,20 +26,20 @@ class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
           for (int i = 0; i < 4; i++)
             Container(
               height: 40,
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
-                color: Colors.grey[350],
-                borderRadius: BorderRadius.circular(30),
+                color: Colors.grey.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 50,
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Textt[i],
+                      child: constText[i],
                     ),
                   ),
                 ],

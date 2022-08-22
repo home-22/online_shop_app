@@ -1,8 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:online_shop_app/widgets/CartAppBar.dart';
 import 'package:online_shop_app/widgets/ItemAppBar.dart';
+import 'package:online_shop_app/widgets/ItemBottomNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({Key? key}) : super(key: key);
@@ -16,7 +18,7 @@ class ItemPage extends StatelessWidget {
           children: [
             const ItemAppBar(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               child: Row(
                 children: const [
                   Text(
@@ -32,17 +34,20 @@ class ItemPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30, right: 30),
+              padding: const EdgeInsets.only(left: 15, right: 15),
               child: Row(
-                children: const [
+                children: [
                   Text(
-                      'Pink blazer with soft material.not hot comfortable\ncaying.available in various sizes.suitable for use at\nparties'),
+                    'Pink blazer with soft material.not hot comfortable\ncaying.available in various sizes.suitable for use at\nparties',
+                    style: TextStyle(
+                        color: Colors.grey.withOpacity(0.5), fontSize: 14),
+                  ),
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  bottom: 10, left: 20, right: 20, top: 5),
+                  bottom: 10, left: 10, right: 10, top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -62,46 +67,47 @@ class ItemPage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
                                 spreadRadius: 3,
                                 blurRadius: 10,
-                                offset: Offset(0, 3),
+                                offset: const Offset(0, 3),
                               ),
                             ]),
-                        child: Icon(
-                          CupertinoIcons.plus,
+                        child: const Icon(
+                          CupertinoIcons.minus,
                           size: 18,
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 10),
-                        child: Text(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: const Text(
                           '01',
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
                                 spreadRadius: 3,
                                 blurRadius: 10,
-                                offset: Offset(0, 3),
+                                offset: const Offset(0, 3),
                               ),
                             ]),
-                        child: Icon(
-                          CupertinoIcons.minus,
+                        child: const Icon(
+                          CupertinoIcons.plus,
                           size: 18,
                         ),
                       )
@@ -112,6 +118,7 @@ class ItemPage extends StatelessWidget {
             )
           ],
         ),
+        bottomNavigationBar: const ItemBottom(),
       ),
     );
   }

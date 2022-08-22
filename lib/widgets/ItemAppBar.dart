@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class ItemAppBar extends StatelessWidget {
@@ -6,17 +8,17 @@ class ItemAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 380,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(50),
-              bottomRight: Radius.circular(50)),
+              bottomLeft: Radius.circular(30),
+              bottomRight: Radius.circular(30)),
           image: DecorationImage(
               image: AssetImage('images/3.jpg'), fit: BoxFit.cover)),
       child: Positioned(
           child: Column(children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Row(
             children: [
               InkWell(

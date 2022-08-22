@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/widgets/CartAppBar.dart';
 import 'package:online_shop_app/widgets/CartBottomNavBar.dart';
@@ -26,13 +28,14 @@ class CartPage extends StatelessWidget {
               children: [
                 const CartItems(),
                 Container(
-                  margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                   padding: const EdgeInsets.all(10),
                   child: Row(
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.red[300],
+                          color: Colors.red.withOpacity(0.5),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: const Icon(
@@ -45,7 +48,7 @@ class CartPage extends StatelessWidget {
                         child: Text(
                           'Add Coupon Code',
                           style: TextStyle(
-                            color: Colors.red[300],
+                            color: Colors.red.withOpacity(0.5),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),

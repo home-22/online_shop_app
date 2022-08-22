@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: file_names
 
+import 'package:flutter/material.dart';
 
 class CartBottomNavBar extends StatelessWidget {
   const CartBottomNavBar({Key? key}) : super(key: key);
@@ -19,14 +20,14 @@ class CartBottomNavBar extends StatelessWidget {
                 Text(
                   'Total',
                   style: TextStyle(
-                      color: Colors.red[300],
+                      color: Colors.red.withOpacity(0.5),
                       fontSize: 22,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   '\$620 ',
                   style: TextStyle(
-                      color: Colors.red[300],
+                      color: Colors.red.withOpacity(0.5),
                       fontSize: 25,
                       fontWeight: FontWeight.bold),
                 ),

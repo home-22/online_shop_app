@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                     width: double.maxFinite,
                     alignment: Alignment.center,
                     margin: const EdgeInsets.symmetric(
-                        vertical: 20, horizontal: 10),
+                        vertical: 10, horizontal: 10),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: Colors.redAccent[100]),
@@ -86,12 +88,15 @@ class _HomePageState extends State<HomePage> {
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        SizedBox(height: 10),
-                                        Text(
-                                          'Get the trandy\nfashion at a discount\nof up to 50%',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 10),
+                                          child: Text(
+                                            'Get the trandy\nfashion at a discount\nof up to 50%',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14),
+                                          ),
                                         ),
                                       ],
                                     )),
@@ -109,8 +114,8 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
-          height: 50,
-          color: Colors.lightGreenAccent.shade400,
+          height: 45,
+          color: const Color(0xFF4C53A5),
           onTap: (index) {}, //za odabir icona
           backgroundColor: Colors.white,
           items: const [

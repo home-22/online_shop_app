@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 
 class ItemAppBar extends StatelessWidget {
@@ -10,11 +9,11 @@ class ItemAppBar extends StatelessWidget {
     return Container(
       height: 380,
       decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30)),
-          image: DecorationImage(
-              image: AssetImage('images/3.jpg'), fit: BoxFit.cover)),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+        image: DecorationImage(
+            image: AssetImage('images/3.jpg'), fit: BoxFit.cover),
+      ),
       child: Positioned(
           child: Column(children: [
         Padding(

@@ -8,12 +8,12 @@ class Items extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      childAspectRatio: 0.55, //  za povecavanje kontnjera u gridu
-      physics: const NeverScrollableScrollPhysics(), // za scrolovanje
+      childAspectRatio: 0.55,
+      physics: const NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       shrinkWrap: true,
       children: [
-        for (int i = 1; i < 8; i++) // za dobijane kartica na displeju
+        for (int i = 1; i < 8; i++)
           Container(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -47,7 +47,9 @@ class Items extends StatelessWidget {
                   ],
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, 'ItemPage');
+                  },
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     child: Image.asset(

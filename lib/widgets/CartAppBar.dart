@@ -23,7 +23,7 @@ class CartAppBar extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 40),
+            padding: EdgeInsets.only(left: 20),
             child: Text(
               'Card',
               style: TextStyle(

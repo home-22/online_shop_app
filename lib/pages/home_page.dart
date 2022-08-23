@@ -23,11 +23,8 @@ class _HomePageState extends State<HomePage> {
         children: [
           const HomeAppBar(),
           Container(
-              //   height: 300,
               padding: const EdgeInsets.only(top: 10),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(0),
-                  color: Colors.grey[100]),
+              decoration: BoxDecoration(color: Colors.grey[200]),
               child: Column(
                 children: [
                   Container(
@@ -36,8 +33,9 @@ class _HomePageState extends State<HomePage> {
                     height: 50,
                     width: double.maxFinite,
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30)),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
                     child: Row(
                       children: const [
                         Icon(
@@ -74,32 +72,33 @@ class _HomePageState extends State<HomePage> {
                             Row(
                               children: [
                                 Container(
-                                    padding: const EdgeInsets.only(left: 40),
-                                    margin: const EdgeInsets.all(10),
-                                    alignment: Alignment.center,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: const [
-                                        Text(
-                                          'Big Sale',
+                                  padding: const EdgeInsets.only(left: 40),
+                                  margin: const EdgeInsets.all(10),
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'Big Sale',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 10),
+                                        child: Text(
+                                          'Get the trandy\nfashion at a discount\nof up to 50%',
                                           style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 22,
-                                              fontWeight: FontWeight.bold),
+                                              fontSize: 14),
                                         ),
-                                        Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 10),
-                                          child: Text(
-                                            'Get the trandy\nfashion at a discount\nof up to 50%',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 14),
-                                          ),
-                                        ),
-                                      ],
-                                    )),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ],
@@ -114,32 +113,33 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
-          height: 45,
-          color: const Color(0xFF4C53A5),
-          onTap: (index) {}, //za odabir icona
-          backgroundColor: Colors.white,
-          items: const [
-            Icon(
-              Icons.home,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              CupertinoIcons.cart_fill,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.message,
-              size: 30,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.person_outline_outlined,
-              size: 30,
-              color: Colors.white,
-            ),
-          ]),
+        height: 45,
+        color: const Color(0xFF4C53A5),
+        onTap: (index) {},
+        backgroundColor: Colors.white,
+        items: const [
+          Icon(
+            Icons.home,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            CupertinoIcons.cart_fill,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.message,
+            size: 30,
+            color: Colors.white,
+          ),
+          Icon(
+            Icons.person_outline_outlined,
+            size: 30,
+            color: Colors.white,
+          ),
+        ],
+      ),
     );
   }
 }

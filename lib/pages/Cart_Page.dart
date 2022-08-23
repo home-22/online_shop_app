@@ -18,7 +18,7 @@ class CartPage extends StatelessWidget {
             height: 700,
             padding: const EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
-              color: Colors.grey[350],
+              color: Colors.grey[200],
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),

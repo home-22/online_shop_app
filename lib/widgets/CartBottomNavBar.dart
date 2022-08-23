@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartBottomNavBar extends StatelessWidget {
@@ -25,7 +26,7 @@ class CartBottomNavBar extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '\$620 ',
+                  '\$600 ',
                   style: TextStyle(
                       color: Colors.red.withOpacity(0.5),
                       fontSize: 25,
@@ -48,7 +49,7 @@ class CartBottomNavBar extends StatelessWidget {
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +8,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      color: Colors.grey[200],
       padding: const EdgeInsets.all(10),
       child: Row(
         children: [
@@ -45,10 +44,10 @@ class HomeAppBar extends StatelessWidget {
           Badge(
             badgeColor: Colors.redAccent,
             padding: const EdgeInsets.all(7),
-            badgeContent: const Text('2'),
+            badgeContent: const Text('3'),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'ItemPage');
+                Navigator.pushNamed(context, 'CartPage');
               },
               child: const CircleAvatar(
                 foregroundImage: AssetImage('images/user.png'),

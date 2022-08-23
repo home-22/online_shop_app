@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,21 +23,18 @@ class ItemBottom extends StatelessWidget {
             ),
           ],
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(CupertinoIcons.cart_badge_plus),
-              label: const Text(
-                'Add To Cart',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              style: ButtonStyle(
-                  padding: MaterialStateProperty.all(const EdgeInsets.symmetric(
-                      vertical: 13, horizontal: 15))),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          child: ElevatedButton.icon(
+            onPressed: () {},
+            icon: const Icon(CupertinoIcons.cart_badge_plus),
+            label: const Text(
+              'Add To Card',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-          ],
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.red[300])),
+          ),
         ),
       ),
     );

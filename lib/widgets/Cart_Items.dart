@@ -12,8 +12,8 @@ class CartItems extends StatelessWidget {
       children: [
         for (int i = 1; i < 5; i++)
           Container(
-            height: 110,
-            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            height: 120,
+            margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -22,18 +22,16 @@ class CartItems extends StatelessWidget {
             child: Row(
               children: [
                 Radio(
-                  // za pravljenje tacke odnosno kruga kao cirtal avatar...
                   value: '',
                   groupValue: '',
-                  activeColor: Colors.red[200],
+                  activeColor: Colors.red.withOpacity(0.5),
                   onChanged: (index) {},
                 ),
                 Container(
-                  height: 70,
-                  width: 70,
-                  margin: const EdgeInsets.only(right: 20),
-                  child: Image.asset(
-                      'images/$i.jpg'), // za dobijenje slika preko index
+                  height: 60,
+                  width: 60,
+                  margin: const EdgeInsets.only(right: 10),
+                  child: Image.asset('images/$i.jpg'),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
